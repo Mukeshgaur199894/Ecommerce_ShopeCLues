@@ -22,3 +22,7 @@ def main():
 if __name__ == '__main__':
     main()
  # python manage.py runserver
+ # git add .
+ # git status
+ # git commit -m  "second_commit"
+ # git push
