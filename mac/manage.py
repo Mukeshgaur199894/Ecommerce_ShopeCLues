@@ -26,3 +26,9 @@ if __name__ == '__main__':
  # git status
  # git commit -m  "second_commit"
  # git push
+
+ #
+ # git add .
+ # git commit -m "cart"
+ # git status-
+ # git push
