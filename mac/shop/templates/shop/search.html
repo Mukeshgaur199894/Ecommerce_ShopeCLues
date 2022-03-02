@@ -1,5 +1,6 @@
 {% extends 'shop/basic.html' %}
-{% block title %} Shop-Clues {% endblock %}
+{% block title %} search-Result {% endblock %}
+
 {% block css %}
 .col-md-3
 {
@@ -90,6 +91,12 @@ padding-right: 0;
 {% block js %}
 <script>
 // Find out the cart items from localStorage
+
+
+{% if msg|length != 0 %}
+alert('{{msg}}');
+window.location.href = "/shop"
+{% endif %}
 if (localStorage.getItem('cart') == null) {
     var cart = {};
 } else {
