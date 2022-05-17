@@ -123,6 +123,7 @@ def checkout(request):
             'CALLBACK_URL': 'http://127.0.0.1:8000/shop/handlerequest/',
 
         }
+
         param_dict['CHECKSUMHASH'] = Checksum.generate_checksum(param_dict, MERCHANT_KEY)
         return render(request,'shop/paytm.html',{'param_dict':param_dict})
 
@@ -132,7 +133,6 @@ def checkout(request):
 @csrf_exempt
 def handlerequest(request):
     # paytm will send you post request here
-    # return HttpResponse('done')
     form = request.POST
     response_dict = {}
     for i in form.keys():
